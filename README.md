@@ -20,19 +20,19 @@ Installation
 3. Configure database credentials in the .env file
 4. Run the following commands:`
 
-**Install PHP packages and dependencies**
+### Install PHP packages and dependencies
 `composer install`
 
-**Generate application key**
+### Generate application key
 `php artisan key:generate`
 
-**Run migrations**
+### Run migrations
 `php artisan migrate`
 
-**Install JavaScript packages and dependencies**
+### Install JavaScript packages and dependencies
 `npm install`
 
-**Build assets**
+### Build assets
 `npm run dev`
 
 5. Start the project
