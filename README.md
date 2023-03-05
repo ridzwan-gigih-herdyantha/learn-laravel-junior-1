@@ -16,9 +16,11 @@ Installation
 
 1. Clone this repository
 2. Create a .env file based on .env.example
+
 `cp .env.example .env`
-3. Configure database credentials in the .env file
-4. Run the following commands:`
+
+3. Configure database credentials in the `.env` file
+4. Run the following commands:
 
 ### Install PHP packages and dependencies
 `composer install`
@@ -35,8 +37,8 @@ Installation
 ### Build assets
 `npm run dev`
 
-5. Start the project
-php artisan serve
+5. Start the project 
+`php artisan serve`
 
 The project will run on `http://localhost:8000/`
 
