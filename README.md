@@ -15,24 +15,26 @@ Installation
 ### Installation
 
 1. Clone this repository
-2. Create a `.env` file based on `.env.example`
-cp .env.example .env
-3. Configure database credentials in the `.env` file
-4. Run the following commands:
-# Install PHP packages and dependencies
-composer install
+2. Create a .env file based on .env.example
+`cp .env.example .env`
+3. Configure database credentials in the .env file
+4. Run the following commands:`
 
-# Generate application key
-php artisan key:generate
+**Install PHP packages and dependencies**
+`composer install`
 
-# Run migrations
-php artisan migrate
+**Generate application key**
+`php artisan key:generate`
 
-# Install JavaScript packages and dependencies
-npm install
+**Run migrations**
+`php artisan migrate`
 
-# Build assets
-npm run dev
+**Install JavaScript packages and dependencies**
+`npm install`
+
+**Build assets**
+`npm run dev`
+
 5. Start the project
 php artisan serve
 
