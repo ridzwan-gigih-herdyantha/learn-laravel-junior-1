@@ -38,6 +38,7 @@ Installation
 `npm run dev`
 
 5. Start the project 
+
 `php artisan serve`
 
 The project will run on `http://localhost:8000/`
@@ -51,9 +52,9 @@ I hope this repository can help in learning
 How to contribute to the project.
 
 1. Fork this repository
-2. 1Create a new branch (git checkout -b feature/new-feature)
-3. Commit changes (git commit -m 'Add new feature')
-4. Push to the branch (git push origin feature/new-feature)
+2. Create a new branch `(git checkout -b feature/new-feature)`
+3. Commit changes `(git commit -m 'Add new feature')`
+4. Push to the branch `(git push origin feature/new-feature)`
 5. Open a pull request
 
 ## License
