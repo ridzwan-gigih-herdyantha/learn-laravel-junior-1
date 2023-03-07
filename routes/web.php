@@ -31,6 +31,14 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/contact', function () {
+    return view('contact', [
+        'title'=> 'About',
+        "name" => "Ridzwan Gigih Herdyantha",
+        "email" => "Ridzwangigih3@gmail.com",
+        "image" => "gambar.jpg"
+    ]);
+});
 
 
 Route::get('/post', [PostController::class, 'index']);
