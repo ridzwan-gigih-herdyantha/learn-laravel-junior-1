@@ -41,5 +41,5 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('/post', [PostController::class, 'index']);
-Route::get('/post/{slug}', [PostController::class, 'show']); //Halaman Single Posts
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show']); //Halaman Single Posts
