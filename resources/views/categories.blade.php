@@ -1,18 +1,18 @@
+
 @extends('layouts.main')
 
 @section('container')
 
-    <h1 class="mb-5">Post Categories </h1>
+    <h1 class="mb-5">{{ $title }} </h1>
 
-    @foreach ($categories as $category )
-    {{-- @dd($categories->pluck('name')) --}}
-    <ul>
-        <li>
+    @foreach ($posts as $post )
+        <article class="mb-5">
             <h2>
-                <a class="text-decoration-none" href="/categories/{{ $category->slug }}">{{ $category->name }}</a>
+                <a class="text-decoration-none" href="/posts/{{ $post->slug }}">{{ $post->title }}</a>
             </h2>
-        </li>
-    </ul>
+            <b>By <a class="text-decoration-none" href="/author/{{ $post->author->username }}"> {{ $post->author->name }} </a> in <a class="text-decoration-none" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></b>
+            <h5> {{ $post->excerpt }}</h5>
+        </article>        
     @endforeach
 
 

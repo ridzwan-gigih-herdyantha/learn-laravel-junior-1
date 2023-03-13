@@ -2,7 +2,7 @@
 
 @section('container')
 
-        <h1 class="mb-5">Page Blog Post </h1>
+        <h1 class="mb-5">{{ $title }}</h1>
 
     @foreach ($posts as $post )
     {{-- @dd($post); --}}
