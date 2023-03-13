@@ -42,12 +42,21 @@ Route::get('/contact', function () {
     ]);
 });
 
+Route::get('/categories', function() {
+    return view('categories', [
+        'title' => 'Post Categories',
+        'active'=> 'categories',
+        'categories' => Category::all()
+    ]);
+});
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{post:slug}', [PostController::class, 'show']); //Halaman Single Posts
+
 Route::get('/categories/{category:slug}', function(Category $category) {
-    return view('categories', [
+    return view('posts', [
         'title' => "Post by Category : $category->name",
+        'active' => 'categories',
         'posts' => $category->posts->load(['category','author']),
     ]);
 });
@@ -55,6 +64,7 @@ Route::get('/categories/{category:slug}', function(Category $category) {
 Route::get('/author/{author:username}', function(User $author){
     return view('posts', [
         'title' => "Posts by : $author->name",
+        // 'active'=> 'categories',
         'posts' => $author->posts->load(['category','author']),
     ]);
 });

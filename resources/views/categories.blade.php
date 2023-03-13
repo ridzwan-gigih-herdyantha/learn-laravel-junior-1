@@ -5,15 +5,22 @@
 
     <h1 class="mb-5">{{ $title }} </h1>
 
-    @foreach ($posts as $post )
-        <article class="mb-5">
-            <h2>
-                <a class="text-decoration-none" href="/posts/{{ $post->slug }}">{{ $post->title }}</a>
-            </h2>
-            <b>By <a class="text-decoration-none" href="/author/{{ $post->author->username }}"> {{ $post->author->name }} </a> in <a class="text-decoration-none" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></b>
-            <h5> {{ $post->excerpt }}</h5>
-        </article>        
-    @endforeach
-
+    <div class="container">
+        <div class="row">
+            @foreach ($categories as $category)
+            <div class="col-md-4">
+                <a href="/categories/{{ $category->slug }}">
+                    
+                    <div class="card text-bg-dark text-white">
+                        <img src="https://source.unsplash.com/500x500?{{ $category->name }}" class="card-img" alt="{{ $category->name }}">
+                        <div class="card-img-overlay d-flex align-items-center p-0">
+                        <h5 class="card-title flex-fill text-center py-3 fs-3" style="background-color: rgba(0, 0, 0, 0.5);">{{ $category->name }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
 
 @endsection
