@@ -7,7 +7,7 @@
             <h1 class="mb-3">Page Detail Post </h1>
             <article class="mb-5 border-bottom">
                 <h2>{{ $post->title }}</h2>
-                <b>By <a class="text-decoration-none" href="/author/{{ $post->author->username }}">{{ $post->author->name }}</a> in <a class="text-decoration-none" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></b>
+                <b>By <a class="text-decoration-none" href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a> in <a class="text-decoration-none" href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a></b>
 
                 <img src="https://source.unsplash.com/1200x400?{{ $post->category->name }}" class="card-img-top  my-3 img-fluid" alt="{{ $post->category->name }}">
                 <article class="fs-6">
