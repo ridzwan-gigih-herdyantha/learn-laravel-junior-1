@@ -23,6 +23,13 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li> --}}
         </ul>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="/login" class="nav-link {{ ($active === "login") ? 'login' : '' }} "><i class="bi bi-box-arrow-in-right"></i>  Login</a>
+          </li>
+        </ul>
+
       </div>
     </div>
   </nav>
