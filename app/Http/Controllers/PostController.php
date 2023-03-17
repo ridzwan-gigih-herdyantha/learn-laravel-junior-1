@@ -13,7 +13,7 @@ class PostController extends Controller
     {
     // dd(request('search'));
     $title = "";
-    if(request('category')) {
+    if(request('category')) {   
         $category = Category::firstWhere('slug', request('category'));
         $title = ' in ' . $category->name;
     }
